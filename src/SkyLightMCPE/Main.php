@@ -21,7 +21,7 @@ class Main extends PluginBase {
               $this->getLogger()->info(C::RED . "Wild disabled!");
     }
     
-    public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
+    public function onCommand(CommandSender $s, Command $cmd, string $label, array $args) : bool{
     if(strtolower($cmd->getName() == "wild")){
         if($s->hasPermission("wild.command")){
         if($s instanceof Player){
