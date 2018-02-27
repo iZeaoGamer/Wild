@@ -5,9 +5,11 @@ namespace SkyLightMCPE;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\level\{Level,Position};
+use pocketmine\level\Level;
+use pocketmine\level\Position;
 use pocketmine\math\Vector3;
-use pocketmine\{Server,Player};
+use pocketmine\Server;
+use pocketmine\Player;
 use pocketmine\utils\TextFormat as C;
 use pocketmine\event\entity\EntityDamageEvent;
 class Main extends PluginBase {
@@ -29,7 +31,7 @@ class Main extends PluginBase {
             $y = 128;
             $z = rand(1,999);
             
-            $s->teleport(new Position($x,$y,$z));
+            $s->teleport(new Position($x, $y, $z, $level));
             $s->sendMessage(C::RED."Teleporting......");
             $s->sendMessage(C::BLUE."If you have been teleported on air you wont take any fall damage.!");
             $this->iswildin[$s->getName()] = true;
@@ -40,7 +42,7 @@ class Main extends PluginBase {
         }
         return true;
     }
-                            }
+        
     public function onDamage(EntityDamageEvent $event){
        if($event->getEntity() instanceof Player){
            if(isset($this->iswildin[$event->getEntity->getName()])){
