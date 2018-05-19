@@ -1,7 +1,5 @@
 <?php
-
 namespace SkyLightMCPE;
-
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
@@ -11,7 +9,7 @@ use pocketmine\math\Vector3;
 use pocketmine\Server;
 use pocketmine\Player;
 use pocketmine\event\Listener;
-use pocketmine\utils\TextFormat as C;
+use pocketmine\utils\TextFormat as TF;
 use pocketmine\event\entity\EntityDamageEvent;
 class Main extends PluginBase implements Listener{
     
@@ -19,10 +17,10 @@ class Main extends PluginBase implements Listener{
     
     public function onEnable(){
               $this->getServer()->getPluginManager()->registerEvents($this, $this);
-              $this->getLogger()->info(C::GREEN . "Wild enabled!");
+              $this->getLogger()->info(TF::GREEN . "Wild enabled!");
     }
     public function onDisable(){
-              $this->getLogger()->info(C::RED . "Wild disabled!");
+              $this->getLogger()->info(TF::RED . "Wild disabled!");
     }
     
     public function onCommand(CommandSender $s, Command $cmd, string $label, array $args) : bool{
@@ -39,11 +37,11 @@ class Main extends PluginBase implements Listener{
         
         }
         }else{
-            $s->sendMessage(C::RED."You dont have permission");
+            $s->sendMessage(TF::RED."You dont have permission");
         }
         return true;
     }
-        
+    }   
     public function onDamage(EntityDamageEvent $event){
        if($event->getEntity() instanceof Player){
            if(isset($this->iswildin[$event->getEntity->getName()])){
