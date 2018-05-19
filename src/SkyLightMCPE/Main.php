@@ -10,6 +10,7 @@ use pocketmine\Server;
 use pocketmine\Player;
 use pocketmine\event\Listener;
 use pocketmine\utils\TextFormat as TF;
+use pocketmine\event\Listener;
 use pocketmine\event\entity\EntityDamageEvent;
 class Main extends PluginBase implements Listener{
     
