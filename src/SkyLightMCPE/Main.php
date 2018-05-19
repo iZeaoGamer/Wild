@@ -10,13 +10,15 @@ use pocketmine\level\Position;
 use pocketmine\math\Vector3;
 use pocketmine\Server;
 use pocketmine\Player;
+use pocketmine\event\Listener;
 use pocketmine\utils\TextFormat as C;
 use pocketmine\event\entity\EntityDamageEvent;
-class Main extends PluginBase {
+class Main extends PluginBase implements Listener{
     
     public $iswildin = [];
     
     public function onEnable(){
+              $this->getServer()->getPluginManager()->registerEvents($this, $this);
               $this->getLogger()->info(C::GREEN . "Wild enabled!");
     }
     public function onDisable(){
@@ -30,10 +32,9 @@ class Main extends PluginBase {
             $x = rand(1,999);
             $y = 128;
             $z = rand(1,999);
-            
-            $s->teleport(new Position($x, $y, $z, $level));
-            $s->sendMessage(C::RED."Teleporting......");
-            $s->sendMessage(C::BLUE."If you have been teleported on air you wont take any fall damage.!");
+            $s->teleport($s->getLevel()->getSafeSpawn(new Vector3($x, $y, $z)));
+            $s->addTitle(TF::AQUA . "§a§lTeleporting...");
+			$s->sendMessage(TF::AQUA . "§dYou have teleported to a random spot.");
             $this->iswildin[$s->getName()] = true;
         
         }
