@@ -44,7 +44,7 @@ class Main extends PluginBase implements Listener{
     }   
     public function onDamage(EntityDamageEvent $event){
        if($event->getEntity() instanceof Player){
-           if(isset($this->iswildin[$event->getEntity->getName()])){
+           if(isset($this->iswildin[$event->getEntity()->getName()])){
                $p = $event->getEntity();
                unset($this->iswildin[$p->getName()]);
                      $event->setCancelled();
