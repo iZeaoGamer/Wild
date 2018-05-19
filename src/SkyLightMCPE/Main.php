@@ -8,7 +8,6 @@ use pocketmine\level\Position;
 use pocketmine\math\Vector3;
 use pocketmine\Server;
 use pocketmine\Player;
-use pocketmine\event\Listener;
 use pocketmine\utils\TextFormat as TF;
 use pocketmine\event\Listener;
 use pocketmine\event\entity\EntityDamageEvent;
@@ -33,7 +32,7 @@ class Main extends PluginBase implements Listener{
             $z = rand(1,999);
             $s->teleport($s->getLevel()->getSafeSpawn(new Vector3($x, $y, $z)));
             $s->addTitle(TF::AQUA . "§a§lTeleporting...");
-			$s->sendMessage(TF::AQUA . "§dYou have teleported to a random spot.");
+	    $s->sendMessage(TF::AQUA . "§dYou have teleported to a random spot.");
             $this->iswildin[$s->getName()] = true;
         
         }
