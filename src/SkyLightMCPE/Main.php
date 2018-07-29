@@ -25,7 +25,6 @@ class Main extends PluginBase implements Listener{
     
     public function onCommand(CommandSender $s, Command $cmd, string $label, array $args) : bool{
     if(strtolower($cmd->getName() == "wild")){
-        if($s->hasPermission("wild.command")){
         if($s instanceof Player){
             $x = rand(1,999);
             $y = 128;
