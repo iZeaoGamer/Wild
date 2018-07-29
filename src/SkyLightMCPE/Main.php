@@ -39,8 +39,7 @@ class Main extends PluginBase implements Listener{
             $s->sendMessage(TF::RED."You dont have permission");
         }
         return true;
-    }
-    }   
+    } 
     public function onDamage(EntityDamageEvent $event){
        if($event->getEntity() instanceof Player){
            if(isset($this->iswildin[$event->getEntity()->getName()])){
