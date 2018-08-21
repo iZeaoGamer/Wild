@@ -29,7 +29,7 @@ class Main extends PluginBase implements Listener{
             $x = rand(1,999);
             $y = 128;
             $z = rand(1,999);
-            $s->teleport($s->getLevel()->getSafeSpawn(new Vector3($x, $y, $z)));
+            $s->teleport($s->getLevel()->getSafeSpawn(new Vector3($x, $y, $z, Server::getInstance()->getLevelByName(world))));
             $s->addTitle(TF::AQUA . "§a§lTeleporting...");
 	    $s->sendMessage(TF::AQUA . "§dYou have teleported to a random spot.");
             $this->iswildin[$s->getName()] = true;
