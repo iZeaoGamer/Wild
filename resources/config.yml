@@ -1,0 +1,19 @@
+## Welcome to the official Wild plugin config! Enjoy.
+## Keep in mind - ALl the options need a valid number, not a string (A message).
+# It has to be a numeric option (Meaning all needs to contain numbers).
+# Will explain in each option.
+# Min = Lowest Coords to teleport you to.
+# Max = Highest coords to teleport you to.
+# All is randomised within the min and Max ratio.
+
+minX: 1
+# How much minimum can teleport you to. Default: 1
+
+maxX: 3000
+# Change How far away you can teleport to (Minimum) to. Default: 3000
+
+minZ: 1
+# Change how far away you can teleport to. (Minimum) Default: 1.
+
+maxZ: 3000
+# Change how far away you can teleport to (Maximum) Default: 3000.

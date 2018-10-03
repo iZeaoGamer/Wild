@@ -1,6 +1,6 @@
 name: Wild
 main: SkyLightMCPE\Main
-version: 1.0.0-BETA
+version: 2.0.0
 api: [3.0.0, 4.0.0]
 author: SkyLightMCPE
 website: https://github.com/SkyLightMCPE

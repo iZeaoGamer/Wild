@@ -32,8 +32,8 @@ class Main extends PluginBase implements Listener{
         if($s instanceof Player){
 		$minX = $this->getConfig()->get("minX");
 		$maxX = $this->getConfig()->get("maxX");
-		$minZ = $this->getConfig()->get("minz");
-		$maxZ = $this->getConfig()->get("maxz");
+		$minZ = $this->getConfig()->get("minZ");
+		$maxZ = $this->getConfig()->get("maxZ");
             $x = rand($minX,$maxX);
             $y = 128;
             $z = rand($minZ,$maxZ);
