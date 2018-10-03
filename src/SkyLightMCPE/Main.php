@@ -18,10 +18,8 @@ class Main extends PluginBase implements Listener{
     public function onEnable(){
               $this->getServer()->getPluginManager()->registerEvents($this, $this);
               $this->getLogger()->info(TF::GREEN . "Wild enabled!");
-	    if(!is_dir($this->getDataFolder())){
-			mkdir($this->getDataFolder());
 	    $this->saveDefaultConfig();
-    }
+		$this->saveResource("config.yml", true);
     }
     public function onDisable(){
               $this->getLogger()->info(TF::RED . "Wild disabled!");
