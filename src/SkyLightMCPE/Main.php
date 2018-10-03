@@ -37,13 +37,13 @@ class Main extends PluginBase implements Listener{
             $z = rand($minZ,$maxZ);
 	    $level = Server::getInstance()->getLevelByName('world');
             $s->teleport($s->getLevel()->getSafeSpawn(new Vector3($x, $y, $z, $level)));
-            $s->addTitle(TF::AQUA . "§a§lTeleporting...");
-	    $s->sendMessage(TF::AQUA . "§dYou have teleported to a random spot.");
+            $s->addTitle($this->getConfig()->get("title_message"));
+	    $s->sendMessage($this->getConfig()->get("wild_message"));
             $this->iswildin[$s->getName()] = true;
         
         }
         }else{
-            $s->sendMessage(TF::RED."You dont have permission");
+            $s->sendMessage($this->getConfig()->get("no_permission"));
         }
         return true;
     } 
