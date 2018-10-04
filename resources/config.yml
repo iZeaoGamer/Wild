@@ -6,9 +6,6 @@
 # Max = Highest coords to teleport you to.
 # All is randomised within the min and Max ratio.
 
-## Now to the messages - You can now customise each message to your very own!
-# You can use § color code symple for coloring your messages! 
-
 minX: 1
 # How much minimum can teleport you to. Default: 1
 
@@ -21,6 +18,9 @@ minZ: 1
 maxZ: 3000
 # Change how far away you can teleport to (Maximum) Default: 3000.
 
+
+## Now to the messages - You can now customise each message to your very own!
+# You can use § color code symple for coloring your messages!
 
 ## MESSSAGES
 title_message: "§a§lTeleporting..."
