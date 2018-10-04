@@ -1,4 +1,3 @@
 # Wild
-Teleports random without fall damage on your current world.
-Free to use.
-Enjoy
+This plugin allows you to teleport to random locations throughout the world (Without fall damage)
+This plugin is configurable. Enjoy.
