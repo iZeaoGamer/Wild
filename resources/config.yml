@@ -1,9 +1,9 @@
 ## Welcome to the official Wild plugin config! Enjoy.
 ## Keep in mind - ALl the options need a valid number, not a string (A message).
-# It has to be a numeric option (Meaning all needs to be contain numbers).
+# It has to be a numeric option (Meaning all needs to contain numbers).
 # Will explain in each option.
-# Min = Lowest Coords to teleport you to.
-# Max = Highest coords to teleport you to.
+# Min = Minimum coords to teleport you to.
+# Max = Maximum coords to teleport you to.
 # All is randomised within the min and Max ratio.
 
 minX: 1
