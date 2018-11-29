@@ -35,7 +35,7 @@ class Main extends PluginBase implements Listener{
             $x = rand($minX,$maxX);
             $y = 128; //To-Do add getHighestBlockAt();
             $z = rand($minZ,$maxZ);
-            $s->teleport($s->getLevel()->getSafeSpawn(new Vector3($x, $y, $z, $sender->getLevel())));
+            $s->teleport($s->getLevel()->getSafeSpawn(new Vector3($x, $y, $z, $s->getLevel())));
             $s->addTitle($this->getConfig()->get("title_message"));
 	    $s->sendMessage($this->getConfig()->get("wild_message"));
             $this->iswildin[$s->getName()] = true;
