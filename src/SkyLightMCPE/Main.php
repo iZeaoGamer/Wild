@@ -34,7 +34,7 @@ class Main extends PluginBase implements Listener{
 		$maxZ = $this->getConfig()->get("maxZ");
             $x = rand($minX,$maxX);
             $z = rand($minZ,$maxZ);
-	    $y =  128;
+	    $y = rand(1, 256); //To-Do test to see if it works.
 	    $s->getLevel()->loadChunk($x, $z, true);
             $s->teleport($s->getLevel()->getSafeSpawn(new Vector3($x, $y, $z)));
             $s->addTitle($this->getConfig()->get("title_message"));
